@@ -1,61 +1,93 @@
-/* General Styling */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-header {
-  background-color: #004aad;
-  color: white;
-  padding: 1rem;
-}
-
-header h1 {
-  text-align: center;
-  margin: 0;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-}
-
-nav a:hover {
-  background-color: #002d70;
-  border-radius: 5px;
-}
-
+/* General Section Styling */
 .section {
-  padding: 2rem;
-  text-align: center;
+  padding: 20px 0; /* Adds padding to top and bottom of each section */
+  margin: 20px 0; /* Adds space between sections */
+  background-color: #f4f4f4; /* Light gray background color */
+  text-align: center; /* Centers the text */
 }
 
-#skills ul {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
+/* Styling for the heading of each section */
+.section h2 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #333; /* Dark text color for contrast */
+  margin-bottom: 10px; /* Adds space below the heading */
 }
 
-#skills li {
-  background-color: #f4f4f4;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 5px;
+/* Styling for the Projects Section */
+#projects {
+  background-color: #ffffff; /* White background for Projects section */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle lift effect */
+  padding: 30px; /* Add padding for inner spacing */
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
+#projects p {
+  font-size: 1.2rem; /* Slightly larger font size for project description */
+  color: #666; /* Lighter color for the description text */
+}
+
+#projects ul {
+  list-style-type: none; /* Remove default bullet points from list */
+  padding-left: 0;
+}
+
+#projects ul li {
+  margin: 10px 0; /* Add space between each project link */
+}
+
+#projects a {
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bold;
+  color: #007BFF; /* Blue color for links */
+}
+
+#projects a:hover {
+  text-decoration: underline; /* Add underline effect when hovering over a link */
+  color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Styling for the Contact Me Section */
+#contact {
+  background-color: #ffffff; /* White background for Contact section */
+  border-radius: 8px; /* Rounded corners for the section */
+  padding: 30px; /* Inner padding for spacing */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Styling for the contact text */
+#contact p {
+  font-size: 1.2rem; /* Larger font size for easier reading */
+  color: #333; /* Dark color for text */
+  margin: 15px 0; /* Adds space between paragraphs */
+}
+
+/* Styling for links in the Contact section */
+#contact a {
+  color: #007BFF; /* Blue color for links */
+  text-decoration: none; /* Remove the underline */
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #0056b3; /* Darker blue color on hover */
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 768px) {
+  .section {
+    padding: 15px; /* Less padding on smaller screens */
+  }
+
+  .section h2 {
+    font-size: 2rem; /* Smaller font size for headings */
+  }
+
+  #projects ul li {
+    margin: 8px 0; /* Adjust margin between project links */
+  }
+
+  #contact p {
+    font-size: 1rem; /* Smaller font size for text */
+  }
 }
