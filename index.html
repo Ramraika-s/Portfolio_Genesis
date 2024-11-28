@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shivam's Portfolio</title>
-  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
+  <!-- Add Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -35,11 +36,24 @@
 
   <section id="skills" class="section">
     <h2>My Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
+    <div class="skill">
+      <label for="html">HTML <i class="fab fa-html5"></i></label> <!-- Added Font Awesome Icon -->
+      <div class="progress">
+        <div class="progress-bar" id="html-bar" data-skill="90"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <label for="css">CSS <i class="fab fa-css3-alt"></i></label> <!-- Added Font Awesome Icon -->
+      <div class="progress">
+        <div class="progress-bar" id="css-bar" data-skill="80"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <label for="js">JavaScript <i class="fab fa-js"></i></label> <!-- Added Font Awesome Icon -->
+      <div class="progress">
+        <div class="progress-bar" id="js-bar" data-skill="70"></div>
+      </div>
+    </div>
   </section>
 
   <section id="projects" class="section">
@@ -47,15 +61,26 @@
     <p>Coming Soon! Stay tuned for amazing work.</p>
   </section>
 
- <section id="contact" class="section">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:shivamramraika01@gmail.com">shivamramraika01@gmail.com</a></p>
-  <p>GitHub: <a href="https://github.com/Ramraika-s" target="_blank">Shivam's GitHub</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-ramraika-102468333" target="_blank">Shivam's LinkedIn</a></p>
-</section>
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: shivamramraika01@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/Ramraika-s" target="_blank">Shivam's GitHub</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shivam-ramraika-102468333/" target="_blank">Shivam's LinkedIn</a></p>
+  </section>
 
   <footer>
     <p>&copy; 2024 Shivam. All Rights Reserved.</p>
   </footer>
+
+  <!-- Add JavaScript here -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const progressBars = document.querySelectorAll('.progress-bar');
+      progressBars.forEach(bar => {
+        const skillPercentage = bar.getAttribute('data-skill');
+        bar.style.width = `${skillPercentage}%`;
+      });
+    });
+  </script>
 </body>
 </html>
